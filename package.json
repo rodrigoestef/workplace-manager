@@ -1,0 +1,42 @@
+{
+  "name": "workplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.0",
+    "electron-builder": "^22.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
+  "build": {
+    "appId": "re.workplace.estef",
+    "productName":"Workplace manager",
+    "directories":{
+      "output":"build"
+    },
+    "icon":"src/icon/app.png",
+    "extraFiles":[
+      "util/**.*",
+      "src/icon/**.*",
+      "src/**.*",
+      "node_modules/bootstrap/dist/css/bootstrap.min.css"
+    ],
+    
+    "nsis":{
+      "oneClick":false,
+      "allowToChangeInstallationDirectory":true
+    }
+  }
+
+}
