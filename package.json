@@ -26,10 +26,13 @@
       "output":"build"
     },
     "icon":"src/icon/app.png",
+    "files":[
+      "main.js",
+      "src/**.*"
+    ],
     "extraFiles":[
       "util/**.*",
       "src/icon/**.*",
-      "src/**.*",
       "node_modules/bootstrap/dist/css/bootstrap.min.css"
     ],
     
