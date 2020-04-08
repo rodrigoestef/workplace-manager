@@ -11,15 +11,16 @@ function main() {
         width:600,
         height:400,
         show:false,
-        icon:path.resolve('./src/icon/app.png'),
+        icon:path.join(__dirname,'./src/icon/app.png'),
         webPreferences:{
             nodeIntegration:true
         }
     })
+    
     win.setMenu(null)
-    win.loadFile(path.resolve('./src/index.html'))
+    win.loadFile(path.join(__dirname,'./src/index.html'))
 
-    var tray = new Tray('./src/icon/app.png');
+    var tray = new Tray(path.join(__dirname,'./src/icon/app.png'));
 
     tray.on('double-click',()=>{
         win.show()
