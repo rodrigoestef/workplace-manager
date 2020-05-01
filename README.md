@@ -7,4 +7,6 @@ um gerenciador de projetos integrado ao VScode
 
 
 tenha acesso a eles de forma rápida
-![aaa](https://user-images.githubusercontent.com/59934575/78470194-e2accb80-76fd-11ea-874a-80fcb2f5d92b.png)
+
+![atualização](https://user-images.githubusercontent.com/59934575/80770759-8e8fde00-8b27-11ea-9ef7-e5f5145fafe7.png)
+
