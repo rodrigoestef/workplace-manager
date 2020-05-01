@@ -29,7 +29,8 @@ function main() {
     var {projects} = JSON.parse(fs.readFileSync(bd,'utf8'))
     var menu = []
     projects.forEach(e => {
-        menu.push({label:e.name,click:()=>exec(`code ${e.dir}`,()=>{})})
+        menu.push({label:e.name,type:'submenu',submenu:[{label:'vscode',click:()=>exec(`code ${e.dir}`,()=>{})},
+    {label:'explorer',click:()=>exec(`explorer ${e.dir}`,()=>{})}]})
     })
     menu.push({label:'sair',click:()=>{app.exit()}})
     tray.setContextMenu(Menu.buildFromTemplate(menu))
@@ -39,7 +40,8 @@ function main() {
         var {projects} = JSON.parse(fs.readFileSync(bd,'utf8'))
         menu = []
         projects.forEach(e => {
-            menu.push({label:e.name,click:()=>exec(`code ${e.dir}`,()=>{})})
+            menu.push({label:e.name,type:'submenu',submenu:[{label:'vscode',click:()=>exec(`code ${e.dir}`,()=>{})},
+        {label:'explorer',click:()=>exec(`explorer ${e.dir}`,()=>{})}]})
         })
         menu.push({label:'sair',click:()=>{app.exit()}})
         tray.setContextMenu(Menu.buildFromTemplate(menu))
